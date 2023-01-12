@@ -1,0 +1,98 @@
+
+<form class="form-horizontal" role="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <legend style="text-align: center;"><b>Cập nhật thông tin nhà cung cấp</b></legend>
+        </div>
+
+        <table style="width:70%; margin: auto">
+            <tr>
+                <td>
+                    <div>
+                        <label style="text-align: left">ID</label>
+                        <input type="number" readonly class="form-control" [(ngModel)]="dataSelect.id" name="id">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Tên ngắn</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.tenNgan" name="tenNgan">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Tên đầy đủ</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.tenDayDu" name="tenDayDu">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Địa chỉ giao dịch</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.diaChiGD" name="diaChiGD">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Địa chỉ TT</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.diaChiTT" name="diaChiTT">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Mã số thuế</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.maSoThue" name="maSoThue">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Liên hệ AM</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.lienHeAM" name="lienHeAM">
+                    </div>
+                </td>
+                <td style="width:80px"></td>
+                <td>
+                    <!-- <div>
+                        <label style="text-align: left">Liên hệ KT</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.lienHeKT" name="lienHeKT">
+                    </div>
+                    <br> -->
+                    <div>
+                        <label style="text-align: left">Liên hệ TD</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.lienHeTD" name="lienHeTD">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Ngày tạo</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="dataSelect.ngayTao" name="ngayTao">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Ngày sửa</label>
+                        <input type="text" readonly class="form-control" [(ngModel)]="dataSelect.ngaySua" name="ngaySua">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Người tạo</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.nguoiTao" name="nguoiTao">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Người sửa</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.nguoiSua" name="nguoiSua">
+                    </div>
+                    <br>
+                    <div>
+                        <label style="text-align: left">Mã</label>
+                        <input type="text" class="form-control" [(ngModel)]="dataSelect.ma" name="ma">
+                    </div>
+                </td>
+            </tr>
+            <br>
+            <tr style="text-align: center;">
+                <td><button type="button" class="btn btn-success" routerLink="">Về danh sách</button></td>
+                <td>
+                </td>
+                <td><button type="submit" class="btn btn-success">Cập nhật</button></td>
+            </tr>
+        </table>
+
+        <br>
+</form>
+
+
+
+
+

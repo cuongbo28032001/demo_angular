@@ -1,0 +1,43 @@
+
+    <style>
+        .Center { vertical-align: middle; text-align: center; }
+        </style>
+    <table class="table table-hover table-bordered" >
+        <thead>
+            <tr>
+                <th class="Center">ID</th>
+                <th class="Center">Tên ngắn</th>
+                <th class="Center">Địa chỉ GD</th>
+                <th class="Center">Địa chỉ TT</th>
+                <th class="Center">Mã số thuế</th>
+                <th class="Center">Liên hệ AM</th>
+                <th class="Center">Liên hệ KT</th>
+                <th class="Center">Liên hệ TD</th>
+                <th class="Center">Người tạo</th>
+                <th class="Center">Người sửa</th>
+                <th class="Center">Mã</th>
+                <th class="Center">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ncc of dmncc">
+                <td class="Center">{{ncc.id}}</td>
+                <td class="Center">{{ncc.tenNgan}}</td>
+                <td class="Center">{{ncc.diaChiGD}}</td>
+                <td class="Center">{{ncc.diaChiTT}}</td>
+                <td class="Center">{{ncc.maSoThue}}</td>
+                <td class="Center">{{ncc.lienHeAM}}</td>
+                <td class="Center">{{ncc.lienHeKT}}</td>
+                <td class="Center">{{ncc.lienHeTD}}</td>
+                <td class="Center">{{ncc.nguoiTao}}</td>
+                <td class="Center">{{ncc.nguoiSua}}</td>
+                <td class="Center">{{ncc.ma}}</td>
+                <td class="Center">
+                    <button routerLink="/update" (click)="selectDataColumn(ncc)">Sửa</button>
+                    <button (click)="selectIdColumn(ncc)"style="margin-left: 10px;">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
