@@ -10,11 +10,12 @@ export class DataService {
 
   private REST_API_SERVER = "http://localhost:8080/DM_NCC";
 
-  private data:DMNCC;
+  data:DMNCC;
 
   constructor(private httpClient: HttpClient) { }
-  public sendGetRequest():Observable<DMNCC[]>{
-    return this.httpClient.get<DMNCC[]>(`${this.REST_API_SERVER}/list`);
+
+  public sendGetRequest(dSNCCrequest:Object):Observable<DMNCC[]>{
+    return this.httpClient.post<DMNCC[]>(`${this.REST_API_SERVER}/query`, dSNCCrequest);
   }
 
   public sendUpdateRequest(updateNCC:DMNCC):Observable<Object>{

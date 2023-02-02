@@ -6,18 +6,6 @@ import { DataService } from './services/data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'demo';
-  listData:any;
-  constructor( private webApiService: DataService) { }
-  ngOnInit(){
-    this.getAllNCC();
-  }
-  getAllNCC(){
-    this.webApiService.sendGetRequest().subscribe((data: any)=>{
-      console.log(data);
-      this.listData= data;
-    })  
-  }
-
 }
