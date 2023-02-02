@@ -48,10 +48,10 @@ export class HomeComponent implements OnInit{
     {
       this.pageNumber = 0;
     }
-    this.dSNCCPagerequest = {pageNumber: 1, pageSize:5};
+    this.dSNCCPagerequest = {pageNo: this.pageNumber, pageSize:this.pageSize};
     console.log(this.dSNCCPagerequest);
     this.request = {'dmncc': this.dSNCCrequest, 'pageDto': this.dSNCCPagerequest};
-    console.log(this.request);
+    console.log(JSON.stringify(this.request));
     this.dataService.sendGetRequest(this.request).pipe(map(result => result['data'])).subscribe(data => {
       this.dmncc = data.content;
       console.log(data);
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit{
   }
 
   nextPaging() {
-    this.pageNumber += 1;
+    this.pageNumber++;
     this.getDMNCC();
   }
 
